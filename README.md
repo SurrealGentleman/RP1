@@ -52,6 +52,18 @@ $git add .
 ```bash
 $git commit -m 'message'
 ```
+
 ```bash
 $git log
+```
+
+## Схема статусов
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged + tracked;
+  staged + tracked -- "изменения" --> modified;
+  modified -- "git add" --> staged + tracked;
+  staged + tracked -- "git commit" --> tracked;
+  tracked -- "изменения" --> modified;
 ```
