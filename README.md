@@ -61,9 +61,7 @@ $git log
 
 ```mermaid
 graph LR;
-  untracked --> staged + tracked;
-  staged + tracked --> modified;
-  modified --> staged + tracked;
-  staged + tracked --> tracked;
-  tracked --> modified;
+  untracked --> staged;
+  staged --> modified;
+  staged --> tracked;
 ```
